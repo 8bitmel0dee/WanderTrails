@@ -1,0 +1,52 @@
+{
+    "trails": [
+      {
+        "name": "Iron Ore Trail",
+        "address": "5850 US-60, Ashland, KY 41102",
+        "date": "09/08/2019",
+        "rating": "4",
+        "comments": "Well-maintained.",
+        "archived": false,
+        "userId": "",
+        "id": 1
+      },
+      {
+        "id": 2,
+        "name": "Lake Vesuvius Lakeshore Trail",
+        "address": "Lake Vesuvius Dam, Pedro, OH 45659",
+        "date": "10/18/2019",
+        "rating": "5",
+        "userId": "",
+        "comments": "My favorite.",
+        "archived": false
+      },
+      {
+        "id": 3,
+        "name": "Greenbo Lake Trail",
+        "address": "763 Lodge Rd, Wurtland, KY 41144",
+        "date": "08/08/2019",
+        "rating": "4",
+        "userId": "",
+        "comments": "Amazing.",
+        "archived": false
+      },
+      {
+        "id": 4,
+        "name": "Test",
+        "address": "tEst",
+        "date": "test",
+        "rating": "test",
+        "userId": "",
+        "comments": "test",
+        "archived": false
+      }
+    ],
+    "users": [
+      {
+        "aud": "auth0|5da9bf4fd5646a0e18ef85ba",
+        "name": "8bitmel0dee",
+        "id": 1
+      }
+    ],
+    "difficulty": []
+  }
