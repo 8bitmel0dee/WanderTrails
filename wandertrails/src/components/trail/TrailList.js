@@ -6,14 +6,22 @@ import TrailManager from '../../modules/TrailManager'
 class TrailList extends Component {
     //define what this component needs to render
     state = {
+        trailId: "",
         trails: [],
+        loadingStatus: true
     };
 
     componentDidMount() {
         console.log("TRAIL LIST: ComponentDidMount");
-        //getAll from TrailManager and hang on to that data; put it in state
-        TrailManager.getAll()
+
+        //userID variable created to only display the trails of the logged in user
+        const userId = parseInt(sessionStorage.getItem("credentials"));
+
+        console.log(userId);
+        //getAll from TrailManager (with userId) and hang on to that data; put it in state
+        TrailManager.getAll(userId)
             .then((trailsFromDatabase) => {
+                trailsFromDatabase.sort((a, b) => new Date(b.rating) - new Date(a.rating));
                 this.setState({
                     trails: trailsFromDatabase
                 })
@@ -43,6 +51,7 @@ class TrailList extends Component {
                             <TrailCard
                                 key={singleTrail.id}
                                 trailProp={singleTrail}
+                                {...this.props}
                             />
 
                         ) : (

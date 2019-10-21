@@ -1,52 +1,152 @@
 {
-    "trails": [
-      {
-        "name": "Iron Ore Trail",
-        "address": "5850 US-60, Ashland, KY 41102",
-        "date": "09/08/2019",
-        "rating": "4",
-        "comments": "Well-maintained.",
-        "archived": false,
-        "userId": "",
-        "id": 1
-      },
-      {
-        "id": 2,
-        "name": "Lake Vesuvius Lakeshore Trail",
-        "address": "Lake Vesuvius Dam, Pedro, OH 45659",
-        "date": "10/18/2019",
-        "rating": "5",
-        "userId": "",
-        "comments": "My favorite.",
-        "archived": false
-      },
-      {
-        "id": 3,
-        "name": "Greenbo Lake Trail",
-        "address": "763 Lodge Rd, Wurtland, KY 41144",
-        "date": "08/08/2019",
-        "rating": "4",
-        "userId": "",
-        "comments": "Amazing.",
-        "archived": false
-      },
-      {
-        "id": 4,
-        "name": "Test",
-        "address": "tEst",
-        "date": "test",
-        "rating": "test",
-        "userId": "",
-        "comments": "test",
-        "archived": false
-      }
-    ],
-    "users": [
-      {
-        "aud": "auth0|5da9bf4fd5646a0e18ef85ba",
-        "name": "8bitmel0dee",
-        "id": 1
-      }
-    ],
-    "difficulty": []
-  }
+  "trails": [
+    {
+      "id": 1,
+      "name": "Iron Ore Trail",
+      "address": "5850 US-60, Ashland, KY 41102",
+      "date": "09/08/2019",
+      "rating": 1,
+      "userId": 5,
+      "comments": "Well-maintained.",
+      "archived": false
+    },
+    {
+      "name": "Lake Vesuvius Lakeshore Trail",
+      "address": "Lake Vesuvius Dam, Pedro, OH 45659",
+      "date": "10/18/2019",
+      "rating": 5,
+      "comments": "Awesome, my favorite.",
+      "archived": false,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "name": "Greenbo Lake Trail",
+      "address": "763 Lodge Rd, Wurtland, KY 41144",
+      "date": "08/08/2019",
+      "rating": 3,
+      "comments": "Nice.",
+      "archived": false,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "5name",
+      "address": "address",
+      "date": "01/08/2000",
+      "rating": 3,
+      "userId": 5,
+      "comments": "random",
+      "archived": false
+    },
+    {
+      "name": "demo",
+      "address": "demo",
+      "date": "2019-01-08",
+      "rating": 5,
+      "comments": "comments",
+      "archived": true,
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "name": "new trail",
+      "address": "address",
+      "date": "2008-02-08",
+      "rating": 2,
+      "comments": "blah",
+      "archived": false,
+      "userId": 5,
+      "id": 6
+    },
+    {
+      "name": "new",
+      "address": "new",
+      "date": "",
+      "rating": 5,
+      "comments": "new",
+      "archived": false,
+      "userId": 5,
+      "id": 7
+    },
+    {
+      "name": "new",
+      "address": "new",
+      "date": "2005-01-02",
+      "rating": 0,
+      "comments": "comments",
+      "archived": false,
+      "userId": 5,
+      "id": 8
+    },
+    {
+      "name": "Iron Ore Trail",
+      "address": "5850 US-60, Ashland, KY 41102",
+      "date": "2019-10-08",
+      "rating": 4,
+      "comments": "Well-maintained.",
+      "archived": false,
+      "userId": 2,
+      "id": 9
+    },
+    {
+      "name": "Lake Vesuvius Lakeshore Trail",
+      "address": "Lake Vesuvius Dam, Pedro, OH 45659",
+      "date": "2019-10-18",
+      "rating": 5,
+      "comments": "Amazing scenery.",
+      "archived": false,
+      "userId": 2,
+      "id": 10
+    },
+    {
+      "name": "Angels Landing Trail",
+      "address": "Zion Canyon Scenic Dr, Springdale, UT 84767",
+      "date": "2018-04-20",
+      "rating": 5,
+      "comments": "Awesome.",
+      "archived": false,
+      "userId": 2,
+      "id": 11
+    },
+    {
+      "id": 12,
+      "name": "Emerald Lake Trail",
+      "address": "Bear Lake Rd, Estes Park, CO 80517",
+      "date": "2019-10-09",
+      "rating": 5,
+      "userId": 2,
+      "comments": "Beautiful.",
+      "archived": false
+    }
+  ],
+  "users": [
+    {
+      "aud": "auth0|5da9bf4fd5646a0e18ef85ba",
+      "name": "8bitmel0dee",
+      "id": 1
+    },
+    {
+      "aud": "google-oauth2|116791592923455613372",
+      "name": "8bitmel0dee",
+      "id": 2
+    },
+    {
+      "aud": "auth0|5daa07217e19db0df0e942c6",
+      "name": "adminadmin",
+      "id": 3
+    },
+    {
+      "aud": "auth0|5daa07643ffddf0dc73a93f6",
+      "name": "admin",
+      "id": 4
+    },
+    {
+      "aud": "auth0|5daa0a5829e6e60df4bda1f3",
+      "name": "admin000",
+      "id": 5
+    }
+  ],
+  "difficulty": []
+}

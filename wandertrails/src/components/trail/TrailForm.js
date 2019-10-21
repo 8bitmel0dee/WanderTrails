@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TrailManager from "../../modules/TrailManager";
-// import './TrailForm.css'
+import './TrailForm.css'
 
 class TrailForm extends Component {
   state = {
@@ -44,11 +44,11 @@ class TrailForm extends Component {
         name: this.state.name,
         address: this.state.address,
         date: this.state.date,
-        rating: this.state.rating,
+        rating: +this.state.rating,
         comments: this.state.comments,
         // difficultyId:
         archived: false,
-        userId: this.state.userId // convert to number
+        userId: +sessionStorage.getItem("credentials") // convert to number
       };
 
       // Create the trail and redirect user to trail list
@@ -84,13 +84,13 @@ class TrailForm extends Component {
 
             <label htmlFor="date">Date</label>
               <input
-                type="text"
+                type="date"
                 required
                 onChange={this.handleFieldChange}
                 id="date"
                 placeholder="Date"
               />
-            <label htmlFor="date">Rating</label>
+            <label htmlFor="date">Rating (0-5) </label>
               <input
                 type="text"
                 required
