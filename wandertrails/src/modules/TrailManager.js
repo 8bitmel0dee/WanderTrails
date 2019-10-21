@@ -5,8 +5,8 @@ export default {
     return fetch(`${remoteURL}/trails/${id}`)
     .then(result => result.json())
   },
-  getAll() {
-    return fetch(`${remoteURL}/trails`)
+  getAll(userId) {
+    return fetch(`${remoteURL}/trails?userId=${userId}`)
     .then(result => result.json())
   },
   delete(id) {

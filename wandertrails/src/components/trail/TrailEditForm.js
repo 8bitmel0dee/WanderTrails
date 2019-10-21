@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import TrailManager from "../../modules/TrailManager";
 
-// import "./AnimalForm.css"
+import "./TrailEditForm.css"
 
 class TrailEditForm extends Component {
     //set the initial state
@@ -32,8 +32,8 @@ class TrailEditForm extends Component {
             name: this.state.name,
             address: this.state.address,
             date: this.state.date,
-            rating: this.state.rating,
-            userId: this.state.userId,
+            rating: +this.state.rating,
+            userId: +sessionStorage.getItem("credentials"),
             //difficultyID:
             comments: this.state.comments,
             archived: false
@@ -91,7 +91,7 @@ class TrailEditForm extends Component {
 
                             <label htmlFor="date">Date</label>
                             <input
-                                type="text"
+                                type="date"
                                 required
                                 className="form-control"
                                 onChange={this.handleFieldChange}
