@@ -53,7 +53,7 @@ class TrailDetail extends Component {
             <picture>
               <img src={require('./hiking.jpg')} alt="Hiking" />
             </picture>
-            <h3>Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
+            <h3><span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
             <p>Address: {this.state.address}</p>
             <p>Date: {this.state.date}</p>
             <p>Rating: {this.state.rating}</p>

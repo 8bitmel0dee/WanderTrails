@@ -14,7 +14,7 @@ class TrailCard extends Component {
           </picture>
 
           <h3>
-            Name:{" "}
+            {/* {" "} */}
             <span className="card-trailname">{this.props.trailProp.name}</span>
           </h3>
           <p>Address: {this.props.trailProp.address}</p>
