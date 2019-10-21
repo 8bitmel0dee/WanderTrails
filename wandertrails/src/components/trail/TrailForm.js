@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TrailManager from "../../modules/TrailManager";
 import './TrailForm.css'
+import Button from 'react-bootstrap/Button';
 
 class TrailForm extends Component {
   state = {
@@ -61,7 +62,7 @@ class TrailForm extends Component {
   render() {
     return (
       <>
-        <form>
+        <form class="pure-form pure-form-stacked">
           <fieldset>
             <div className="formgrid">
               <label htmlFor="name">Name</label>
@@ -121,13 +122,13 @@ class TrailForm extends Component {
               </select> */}
             </div>
             <div className="alignRight">
-              <button
+              <Button variant="success" size="lg"
                 type="button"
                 disabled={this.state.loadingStatus}
                 onClick={this.constructNewTrail}
               >
                 Submit
-              </button>
+              </Button>
             </div>
           </fieldset>
         </form>

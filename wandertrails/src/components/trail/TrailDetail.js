@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TrailManager from '../../modules/TrailManager';
 import { Link } from "react-router-dom";
 import './TrailDetail.css'
+import Button from 'react-bootstrap/Button';
 
 class TrailDetail extends Component {
 
@@ -52,21 +53,21 @@ class TrailDetail extends Component {
             <picture>
               <img src={require('./hiking.jpg')} alt="Hiking" />
             </picture>
-            <h3>Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
+            <h3><span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
             <p>Address: {this.state.address}</p>
             <p>Date: {this.state.date}</p>
             <p>Rating: {this.state.rating}</p>
             <p>Comments: {this.state.comments}</p>
 
-            <button type="button"
+            <Button variant="danger" type="button"
             disabled={this.state.loadingStatus}
             onClick={this.handleDelete}
             >Delete
-            </button>
+            </Button>
 
             <Link to={`/trails/${this.props.trailId}/edit`}>
 
-            <button>Edit</button>
+            <Button variant="dark">Edit</Button>
 
             </Link>
 
