@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TrailManager from "../../modules/TrailManager";
-
+import Button from 'react-bootstrap/Button';
 import "./TrailEditForm.css"
 
 class TrailEditForm extends Component {
@@ -133,14 +133,14 @@ class TrailEditForm extends Component {
               </select> */}
                         </div>
                         <div className="alignRight">
-                            <button
+                            <Button variant="success" size="lg"
                                 type="button"
                                 disabled={this.state.loadingStatus}
                                 onClick={this.updateExistingTrail}
                                 className="btn btn-primary"
                             >
                                 Submit
-              </button>
+                            </Button>
                         </div>
                     </fieldset>
                 </form>

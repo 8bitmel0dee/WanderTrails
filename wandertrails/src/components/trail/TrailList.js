@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 //import the components we will need
 import TrailCard from './TrailCard'
 import TrailManager from '../../modules/TrailManager'
+import Button from 'react-bootstrap/Button';
+
+
 
 class TrailList extends Component {
     //define what this component needs to render
@@ -33,15 +36,17 @@ class TrailList extends Component {
 
         return (
             <>
+
+                <br></br>
                 {/* //add this button above your display of trail cards */}
                 <section className="section-content">
-                    <button
+                    <Button variant="dark" size="lg"
                         type="button"
                         className="btn"
                         onClick={() => { this.props.history.push("/trails/new") }}
                         >Add New Trail
 
-                    </button>
+                    </Button>
                 </section>
 
                 <div className="container-cards">

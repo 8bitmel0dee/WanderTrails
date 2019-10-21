@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+
+
 
 class TrailCard extends Component {
   render() {
@@ -21,7 +24,7 @@ class TrailCard extends Component {
 
         <Link to={`/trails/${this.props.trailProp.id}`}>
 
-            <button>Details</button>
+            <Button variant="secondary" size="lg">Details</Button>
 
         </Link>
 

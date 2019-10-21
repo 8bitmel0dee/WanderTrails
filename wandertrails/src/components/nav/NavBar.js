@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Link, withRouter } from "react-router-dom";
 import './NavBar.css';
 import auth0Client from "../auth/Auth";
+import Button from 'react-bootstrap/Button';
+
+
 
 
 class NavBar extends Component {
@@ -27,14 +30,16 @@ class NavBar extends Component {
         ) : (
             <React.Fragment>
              <label>
+                 <br></br>
                 {auth0Client.getProfile().name}
               </label>
-              <button
-                className="btn btn-danger"
+              
+              <Button
+                variant="outline-dark" size="lg"
                 onClick={this.signOut}
               >
                 Sign Out
-              </button>
+              </Button>
 
             <li><Link className="nav-link" to="/trails">Trails</Link></li>
             </React.Fragment>

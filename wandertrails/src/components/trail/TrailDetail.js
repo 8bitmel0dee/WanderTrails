@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TrailManager from '../../modules/TrailManager';
 import { Link } from "react-router-dom";
 import './TrailDetail.css'
+import Button from 'react-bootstrap/Button';
 
 class TrailDetail extends Component {
 
@@ -58,15 +59,15 @@ class TrailDetail extends Component {
             <p>Rating: {this.state.rating}</p>
             <p>Comments: {this.state.comments}</p>
 
-            <button type="button"
+            <Button variant="danger" type="button"
             disabled={this.state.loadingStatus}
             onClick={this.handleDelete}
             >Delete
-            </button>
+            </Button>
 
             <Link to={`/trails/${this.props.trailId}/edit`}>
 
-            <button>Edit</button>
+            <Button variant="dark">Edit</Button>
 
             </Link>
 

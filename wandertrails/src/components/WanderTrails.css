@@ -7,6 +7,12 @@ body,
 button,
 input,
 select,
+
+body {
+    background-color: linen;
+    font-family: 'Titillium Web', Arial, sans-serif;
+
+}
 textarea {
 	color: #404040;
 	font-family: 'Titillium Web', Arial, sans-serif;
@@ -25,6 +31,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .section-content{
     text-align: center;
+    
 }
 
 .container-cards{
@@ -38,11 +45,12 @@ h1,h2,h3,h4,h5,h6 {
     padding: 1em;
     margin: 1em;
     border: 1x solid gray;
+
 }
 
 img{
     display: block;
     height: auto;
-    border-radius: 50%;
+    border-radius: 8px;
     width: 100%
 }
