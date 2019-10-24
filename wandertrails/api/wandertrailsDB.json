@@ -38,7 +38,7 @@
       "rating": 3,
       "userId": 5,
       "comments": "random",
-      "archived": false
+      "archived": true
     },
     {
       "name": "demo",
@@ -81,14 +81,14 @@
       "id": 8
     },
     {
+      "id": 9,
       "name": "Iron Ore Trail",
       "address": "5850 US-60, Ashland, KY 41102",
       "date": "2019-10-08",
       "rating": 4,
-      "comments": "Well-maintained.",
-      "archived": false,
       "userId": 2,
-      "id": 9
+      "comments": "Well-maintained.",
+      "archived": false
     },
     {
       "id": 10,
@@ -118,6 +118,16 @@
       "rating": 5,
       "userId": 2,
       "comments": "Beautiful.",
+      "archived": false
+    },
+    {
+      "id": 13,
+      "name": "Barboursville Trail",
+      "address": "123 Barboursville Road",
+      "date": "2019-10-23",
+      "rating": 3,
+      "userId": 5,
+      "comments": "Very fun ",
       "archived": false
     }
   ],
