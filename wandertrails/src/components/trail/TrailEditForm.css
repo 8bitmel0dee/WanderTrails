@@ -40,9 +40,9 @@ fieldset label {
     color: cornsilk;
     font-size: 25px;
 }
-fieldset input:focus + label {
-    color: #933;
-}
+/* fieldset input:focus + label {
+    color: #28A745;
+} */
 
 fieldset .formgrid {
     display: grid;
