@@ -3,13 +3,14 @@ import TrailManager from "../../modules/TrailManager";
 import './TrailForm.css'
 import Button from 'react-bootstrap/Button';
 
+
 class TrailForm extends Component {
   state = {
     name: "",
     address: "",
     date:"",
     rating:"",
-    // difficultyId:"",
+    difficulty:"",
     comments:"",
     loadingStatus: false,
     userId:""
@@ -47,7 +48,7 @@ class TrailForm extends Component {
         date: this.state.date,
         rating: +this.state.rating,
         comments: this.state.comments,
-        // difficultyId:
+        difficulty: +this.state.difficulty,
         archived: false,
         userId: +sessionStorage.getItem("credentials") // convert to number
       };
@@ -107,19 +108,30 @@ class TrailForm extends Component {
                 id="comments"
                 placeholder="Comments"
               />
-
-              {/* <select
+              <label htmlFor="date">Difficulty (0-3) </label>
+              <input
+                type="text"
+                required
+                onChange={this.handleFieldChange}
+                id="difficulty"
+                placeholder="Level of difficulty"
+              />
+            {/* <select
                 className="form-control"
-                id="employeeId"
-                value={this.state.employeeId}
+                id="sort"
+                value={this.state.rating}
                 onChange={this.handleFieldChange}
               >
-                {this.state.employees.map(employee => (
-                  <option key={employee.id} value={employee.id}>
-                    {employee.name}
+               {this.state.trails.map(singleTrail => (
+                  <option key={singleTrail.rating} value={singleTrail.id}>
+                    {singleTrail.name}
                   </option>
                 ))}
               </select> */}
+
+
+
+
             </div>
             <div className="alignRight">
               <Button variant="success" size="lg"

@@ -26,6 +26,7 @@ class TrailCard extends Component {
         </h3>
             <p>Address: {this.props.trailProp.address}</p>
             <p>Rating (0-5): {this.props.trailProp.rating}</p>
+            <p>Difficulty: {this.props.trailProp.difficulty}</p>
 
 
 {/* Details button / Link */}

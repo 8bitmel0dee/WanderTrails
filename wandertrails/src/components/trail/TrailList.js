@@ -3,15 +3,48 @@ import React, { Component } from 'react'
 import TrailCard from './TrailCard'
 import TrailManager from '../../modules/TrailManager'
 import Button from 'react-bootstrap/Button';
+import Select from 'react-select';
 
-
+const options = [
+    { value: 'rating', label: 'Sort By Rating' },
+    { value: 'difficulty', label: 'Sort By Difficulty' },
+    { value: 'date', label: 'Sort By Date' },
+  ];
 
 class TrailList extends Component {
     //define what this component needs to render
     state = {
         trailId: "",
         trails: [],
-        loadingStatus: true
+        loadingStatus: true,
+        selectedOption: ""
+    };
+
+    handleChange = selectedOption => {
+        this.setState(
+            { selectedOption },
+            () => console.log('Option selected:', this.state.selectedOption)
+            );
+
+
+            console.log(selectedOption, "sort test - selected option")
+
+
+            if (selectedOption.value === 'rating') {
+
+                this.state.trails.sort((a, b) => b.rating - a.rating);
+            }
+
+            if (selectedOption.value === 'difficulty') {
+
+                this.state.trails.sort((a, b) => b.difficulty - a.difficulty);
+            }
+
+            if (selectedOption.value === 'date') {
+
+                this.state.trails.sort((a, b) => new Date(b.date) - new Date(a.date));
+            }
+
     };
 
     componentDidMount() {
@@ -23,16 +56,18 @@ class TrailList extends Component {
         console.log(userId);
         //getAll from TrailManager (with userId) and hang on to that data; put it in state
         TrailManager.getAll(userId)
-            .then((trailsFromDatabase) => {
-                trailsFromDatabase.sort((a, b) => new Date(b.rating) - new Date(a.rating));
+            .then((trails) => {
+                trails.sort((a, b) => new Date(b.date) - new Date(a.date));
                 this.setState({
-                    trails: trailsFromDatabase
+                    trails: trails
                 })
             })
+
     }
 
     render() {
         console.log("TRAIL LIST: Render");
+        const { selectedOption } = this.state;
 
         return (
             <>
@@ -47,6 +82,14 @@ class TrailList extends Component {
                         >Add New Trail
 
                     </Button>
+                </section>
+
+                <section className="sort-dropdown">
+                    <Select
+                        value={selectedOption}
+                        onChange={this.handleChange}
+                        options={options}
+                    />
                 </section>
 
                 <div className="container-cards">

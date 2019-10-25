@@ -8,6 +8,7 @@
       "rating": 1,
       "userId": 5,
       "comments": "Well-maintained.",
+      "difficulty": 1,
       "archived": false
     },
     {
@@ -17,6 +18,7 @@
       "rating": 5,
       "comments": "Awesome, my favorite.",
       "archived": false,
+      "difficulty": 1,
       "userId": 1,
       "id": 2
     },
@@ -28,6 +30,7 @@
       "comments": "Nice.",
       "archived": false,
       "userId": 1,
+      "difficulty": 1,
       "id": 3
     },
     {
@@ -38,6 +41,7 @@
       "rating": 3,
       "userId": 5,
       "comments": "random",
+      "difficulty": 1,
       "archived": true
     },
     {
@@ -46,6 +50,7 @@
       "date": "2019-01-08",
       "rating": 5,
       "comments": "comments",
+      "difficulty": 1,
       "archived": true,
       "userId": 2,
       "id": 5
@@ -56,6 +61,7 @@
       "date": "2008-02-08",
       "rating": 2,
       "comments": "blah",
+      "difficulty": 1,
       "archived": false,
       "userId": 5,
       "id": 6
@@ -66,6 +72,7 @@
       "date": "",
       "rating": 5,
       "comments": "new",
+      "difficulty": 1,
       "archived": false,
       "userId": 5,
       "id": 7
@@ -76,6 +83,7 @@
       "date": "2005-01-02",
       "rating": 0,
       "comments": "comments",
+      "difficulty": 1,
       "archived": false,
       "userId": 5,
       "id": 8
@@ -88,6 +96,7 @@
       "rating": 4,
       "userId": 2,
       "comments": "Well-maintained.",
+      "difficulty": 1,
       "archived": false
     },
     {
@@ -97,6 +106,7 @@
       "date": "2019-10-18",
       "rating": 5,
       "userId": 2,
+      "difficulty": 3,
       "comments": "Amazing scenery.",
       "archived": false
     },
@@ -107,6 +117,7 @@
       "date": "2018-04-20",
       "rating": 5,
       "userId": 2,
+      "difficulty": 3,
       "comments": "Awesome.",
       "archived": false
     },
@@ -117,6 +128,7 @@
       "date": "2019-10-09",
       "rating": 5,
       "userId": 2,
+      "difficulty": 0,
       "comments": "Beautiful.",
       "archived": false
     },
@@ -128,7 +140,30 @@
       "rating": 3,
       "userId": 5,
       "comments": "Very fun ",
+      "difficulty": 1,
       "archived": false
+    },
+    {
+      "id": 14,
+      "name": "trail",
+      "address": "trail",
+      "date": "2019-01-01",
+      "rating": 0,
+      "userId": 2,
+      "difficulty": 2,
+      "comments": "comments",
+      "archived": false
+    },
+    {
+      "name": "trail1",
+      "address": "trail1",
+      "date": "2019-01-01",
+      "rating": 5,
+      "comments": "comments",
+      "difficulty": 1,
+      "archived": false,
+      "userId": 2,
+      "id": 15
     }
   ],
   "users": [

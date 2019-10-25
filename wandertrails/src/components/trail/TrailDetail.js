@@ -12,7 +12,7 @@ class TrailDetail extends Component {
         date: "",
         rating: "",
         userId: "",
-        // difficultyId: "",
+        difficulty:"",
         comments: "",
         archived: false,
         loadingStatus: true,
@@ -38,7 +38,7 @@ class TrailDetail extends Component {
                 date: trail.date,
                 rating: trail.rating,
                 userId: trail.userId,
-                // difficultyId:
+                difficulty: trail.difficulty,
                 comments: trail.comments,
                 archived: false,
                 loadingStatus: false
@@ -58,6 +58,7 @@ class TrailDetail extends Component {
             <p>Date: {this.state.date}</p>
             <p>Rating: {this.state.rating}</p>
             <p>Comments: {this.state.comments}</p>
+            <p>Difficulty: {this.state.difficulty}</p>
 
             <Button
                 variant="danger"
