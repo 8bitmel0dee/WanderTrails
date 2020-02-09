@@ -12,6 +12,7 @@ class TrailForm extends Component {
     rating:"",
     difficulty:"",
     comments:"",
+    imageTrail:"",
     loadingStatus: false,
     userId:""
   };
@@ -49,6 +50,7 @@ class TrailForm extends Component {
         rating: +this.state.rating,
         comments: this.state.comments,
         difficulty: +this.state.difficulty,
+        imageTrail: this.state.imageTrail,
         archived: false,
         userId: +sessionStorage.getItem("credentials") // convert to number
       };
@@ -66,56 +68,69 @@ class TrailForm extends Component {
         <form class="pure-form pure-form-stacked">
           <fieldset>
             <div className="formgrid">
+
               <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                required
-                onChange={this.handleFieldChange}
-                id="name"
-                placeholder="Trail name"
+                <input
+                  type="text"
+                  required
+                  onChange={this.handleFieldChange}
+                  id="name"
+                  placeholder="Trail name"
               />
 
               <label htmlFor="address">Address</label>
-              <input
-                type="text"
-                required
-                onChange={this.handleFieldChange}
-                id="address"
-                placeholder="Address"
+                <input
+                  type="text"
+                  required
+                  onChange={this.handleFieldChange}
+                  id="address"
+                  placeholder="Address"
               />
 
-            <label htmlFor="date">Date</label>
-              <input
-                type="date"
-                required
-                onChange={this.handleFieldChange}
-                id="date"
-                placeholder="Date"
-              />
-            <label htmlFor="date">Rating (0-5) </label>
-              <input
-                type="text"
-                required
-                onChange={this.handleFieldChange}
-                id="rating"
-                placeholder="Rating"
-              />
-            <label htmlFor="date">Comments</label>
+              <label htmlFor="date">Date</label>
                 <input
-                type="text"
-                required
-                onChange={this.handleFieldChange}
-                id="comments"
-                placeholder="Comments"
+                  type="date"
+                  required
+                  onChange={this.handleFieldChange}
+                  id="date"
+                  placeholder="Date"
               />
+
+              <label htmlFor="date">Rating (0-5) </label>
+                <input
+                  type="text"
+                  required
+                  onChange={this.handleFieldChange}
+                  id="rating"
+                  placeholder="Rating"
+              />
+
+              <label htmlFor="date">Comments</label>
+                <input
+                  type="text"
+                  required
+                  onChange={this.handleFieldChange}
+                  id="comments"
+                  placeholder="Comments"
+              />
+
               <label htmlFor="date">Difficulty (0-3) </label>
-              <input
-                type="text"
-                required
-                onChange={this.handleFieldChange}
-                id="difficulty"
-                placeholder="Level of difficulty"
+                <input
+                  type="text"
+                  required
+                  onChange={this.handleFieldChange}
+                  id="difficulty"
+                  placeholder="Level of difficulty"
               />
+
+              <label htmlFor="imageTrail">Upload Image</label>
+                <input
+                  type="url"
+                  onChange={this.handleFieldChange}
+                  id="imageTrail"
+                  placeholder = "Direct image URL, Example: https://i.imgur.com/eTrPwAG.jpg"
+              />
+
             {/* <select
                 className="form-control"
                 id="sort"
@@ -130,17 +145,16 @@ class TrailForm extends Component {
               </select> */}
 
 
+              <div className="alignRight">
+                <Button variant="success" size="lg"
+                    type="button"
+                    disabled={this.state.loadingStatus}
+                    onClick={this.constructNewTrail}
 
+                > Submit
+                </Button>
+              </div>
 
-            </div>
-            <div className="alignRight">
-              <Button variant="success" size="lg"
-                type="button"
-                disabled={this.state.loadingStatus}
-                onClick={this.constructNewTrail}
-              >
-                Submit
-              </Button>
             </div>
           </fieldset>
         </form>

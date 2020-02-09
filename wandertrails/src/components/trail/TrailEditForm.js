@@ -13,6 +13,7 @@ class TrailEditForm extends Component {
         userId: "",
         difficulty: "",
         comments: "",
+        imageTrail: "",
         archived: "",
         loadingStatus: true,
         //trails: []
@@ -36,6 +37,7 @@ class TrailEditForm extends Component {
             userId: +sessionStorage.getItem("credentials"),
             difficulty: +this.state.difficulty,
             comments: this.state.comments,
+            imageTrail: this.state.imageTrail,
             archived: false
         };
 
@@ -55,6 +57,7 @@ class TrailEditForm extends Component {
                     difficulty: trail.difficulty,
                     userId: trail.userId,
                     comments: trail.comments,
+                    imageTrail: trail.imageTrail,
                     loadingStatus: false,
                     archived: false,
                     trails: parsedTrails
@@ -127,6 +130,14 @@ class TrailEditForm extends Component {
                                 onChange={this.handleFieldChange}
                                 id="difficulty"
                                 value={this.state.difficulty}
+                            />
+
+                            <label htmlFor="imageTrail">Upload Image</label>
+                            <input
+                                type="url"
+                                onChange={this.handleFieldChange}
+                                id="imageTrail"
+                                placeholder = "Direct image URL, Example: https://i.imgur.com/eTrPwAG.jpg"
                             />
 
                             {/* <select

@@ -31,7 +31,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .section-content{
     text-align: center;
-    
+
 }
 
 .container-cards{
@@ -53,4 +53,16 @@ img{
     height: auto;
     border-radius: 8px;
     width: 100%
+}
+
+#demo {
+    font-size: large;
+}
+
+.home-page {
+    background-image: url('https://i.imgur.com/4GjIYON.jpg');
+}
+
+.sort-dropdown {
+    margin-left: 100px;
 }

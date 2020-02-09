@@ -18,10 +18,17 @@ class NavBar extends Component {
   render(){
 
     return (
+
       <header>
-        <h1 className="site-title">Wander Trails<br />
-          <small>“I took a walk in the woods and came out taller than trees.” – Henry David Thoreau</small>
+
+        <h1 className="site-title">Wander Trails
         </h1>
+
+        <h2 className="title-quote">
+          <small>“I took a walk in the woods and came out taller than trees.” – Henry David Thoreau
+          </small>
+        </h2>
+        
         <nav>
           <ul className="container">
           <li><Link className="nav-link" to="/">Home</Link></li>
@@ -29,13 +36,13 @@ class NavBar extends Component {
               <button className="btn btn-success" onClick={auth0Client.signIn}>Sign In</button>
         ) : (
             <React.Fragment>
-             <label>
+             <label className="authLabel">
                  <br></br>
                 {auth0Client.getProfile().name}
               </label>
-              
+
               <Button
-                variant="outline-dark" size="lg"
+                variant="outline" size="sm"
                 onClick={this.signOut}
               >
                 Sign Out

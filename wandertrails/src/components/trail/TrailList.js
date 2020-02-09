@@ -73,7 +73,17 @@ class TrailList extends Component {
             <>
 
                 <br></br>
-                {/* //add this button above your display of trail cards */}
+
+                <section className="sort-dropdown" style={{width: 200}}>
+                    <Select name="Sort By:"
+
+                        value={selectedOption}
+                        onChange={this.handleChange}
+                        options={options}
+                    />
+                </section>
+
+                {/* // button above display of trail cards */}
                 <section className="section-content">
                     <Button variant="dark" size="lg"
                         type="button"
@@ -84,13 +94,11 @@ class TrailList extends Component {
                     </Button>
                 </section>
 
-                <section className="sort-dropdown">
-                    <Select
-                        value={selectedOption}
-                        onChange={this.handleChange}
-                        options={options}
-                    />
-                </section>
+                <br></br>
+
+
+
+
 
                 <div className="container-cards">
 

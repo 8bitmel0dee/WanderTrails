@@ -14,6 +14,7 @@ class TrailDetail extends Component {
         userId: "",
         difficulty:"",
         comments: "",
+        imageTrail: "",
         archived: false,
         loadingStatus: true,
 
@@ -40,6 +41,7 @@ class TrailDetail extends Component {
                 userId: trail.userId,
                 difficulty: trail.difficulty,
                 comments: trail.comments,
+                imageTrail: trail.imageTrail,
                 archived: false,
                 loadingStatus: false
             });
@@ -51,7 +53,7 @@ class TrailDetail extends Component {
         <div className="card">
           <div className="card-content">
             <picture>
-              <img src={require('./hiking.jpg')} alt="Hiking" />
+              <img src={this.state.imageTrail} alt="Hiking" />
             </picture>
             <h3><span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
             <p>Address: {this.state.address}</p>
