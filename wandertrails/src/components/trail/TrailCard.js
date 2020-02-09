@@ -4,18 +4,23 @@ import Button from 'react-bootstrap/Button';
 
 
 
+
 class TrailCard extends Component {
   render() {
     return (
-      <div className="card">
+
+// Bootstrap Cards
+
+      <div className="card text-white" style={{backgroundColor: '#233D4D', width: 400}}>
         <div className="card-content">
 
 {/* Trail Image */}
 
         <picture>
-            <img src={require("./hiking.jpg")}
-            alt="Hiking"
-            />
+            {/* <img src={require("./hiking.jpg")} */}
+
+            {/* alt="Hiking" */}
+            <img src={this.props.trailProp.imageTrail}/>
         </picture>
 
 {/* Trail Name and mini details (Address / Rating)*/}
@@ -26,6 +31,7 @@ class TrailCard extends Component {
         </h3>
             <p>Address: {this.props.trailProp.address}</p>
             <p>Rating (0-5): {this.props.trailProp.rating}</p>
+            <p>Difficulty: {this.props.trailProp.difficulty}</p>
 
 
 {/* Details button / Link */}

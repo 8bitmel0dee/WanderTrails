@@ -1,5 +1,5 @@
 small {
-    font-size: 75%;
+    font-size: 80%;
   }
 
   header {
@@ -8,10 +8,25 @@ small {
   }
 
   .site-title {
-    color:#ffffff;
+    color: cornsilk;
     text-align: center;
+    text-shadow: 2px 2px #233d4d;
 
   }
+
+  .title-quote{
+    color: cornsilk;
+    text-align: center;
+    text-shadow: 1px 1px black;
+
+  }
+
+  .authLabel{
+    text-align: center;
+      color: linen;
+      border: #233d4d;
+      text-shadow: 1px 1px black;
+    }
 
   nav .container {
     display: flex;
@@ -41,3 +56,4 @@ small {
   label userNameLogin {
       font-size: 50%
   }
+

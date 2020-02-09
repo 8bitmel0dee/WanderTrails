@@ -12,8 +12,9 @@ class TrailDetail extends Component {
         date: "",
         rating: "",
         userId: "",
-        // difficultyId: "",
+        difficulty:"",
         comments: "",
+        imageTrail: "",
         archived: false,
         loadingStatus: true,
 
@@ -38,8 +39,9 @@ class TrailDetail extends Component {
                 date: trail.date,
                 rating: trail.rating,
                 userId: trail.userId,
-                // difficultyId:
+                difficulty: trail.difficulty,
                 comments: trail.comments,
+                imageTrail: trail.imageTrail,
                 archived: false,
                 loadingStatus: false
             });
@@ -51,13 +53,14 @@ class TrailDetail extends Component {
         <div className="card">
           <div className="card-content">
             <picture>
-              <img src={require('./hiking.jpg')} alt="Hiking" />
+              <img src={this.state.imageTrail} alt="Hiking" />
             </picture>
             <h3><span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
             <p>Address: {this.state.address}</p>
             <p>Date: {this.state.date}</p>
             <p>Rating: {this.state.rating}</p>
             <p>Comments: {this.state.comments}</p>
+            <p>Difficulty: {this.state.difficulty}</p>
 
             <Button
                 variant="danger"

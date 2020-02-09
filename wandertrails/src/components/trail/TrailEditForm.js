@@ -11,8 +11,9 @@ class TrailEditForm extends Component {
         date: "",
         rating: "",
         userId: "",
-        difficultyId: "",
+        difficulty: "",
         comments: "",
+        imageTrail: "",
         archived: "",
         loadingStatus: true,
         //trails: []
@@ -34,8 +35,9 @@ class TrailEditForm extends Component {
             date: this.state.date,
             rating: +this.state.rating,
             userId: +sessionStorage.getItem("credentials"),
-            //difficultyID:
+            difficulty: +this.state.difficulty,
             comments: this.state.comments,
+            imageTrail: this.state.imageTrail,
             archived: false
         };
 
@@ -52,9 +54,10 @@ class TrailEditForm extends Component {
                     address: trail.address,
                     date: trail.date,
                     rating: trail.rating,
-                    //difficultyID:
+                    difficulty: trail.difficulty,
                     userId: trail.userId,
                     comments: trail.comments,
+                    imageTrail: trail.imageTrail,
                     loadingStatus: false,
                     archived: false,
                     trails: parsedTrails
@@ -117,6 +120,24 @@ class TrailEditForm extends Component {
                                 onChange={this.handleFieldChange}
                                 id="comments"
                                 value={this.state.comments}
+                            />
+
+                            <label htmlFor="difficulty">Difficulty (1-3)</label>
+                            <input
+                                type="text"
+                                required
+                                className="form-control"
+                                onChange={this.handleFieldChange}
+                                id="difficulty"
+                                value={this.state.difficulty}
+                            />
+
+                            <label htmlFor="imageTrail">Upload Image</label>
+                            <input
+                                type="url"
+                                onChange={this.handleFieldChange}
+                                id="imageTrail"
+                                placeholder = "Direct image URL, Example: https://i.imgur.com/eTrPwAG.jpg"
                             />
 
                             {/* <select
