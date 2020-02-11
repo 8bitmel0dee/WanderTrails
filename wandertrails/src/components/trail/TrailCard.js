@@ -11,7 +11,7 @@ class TrailCard extends Component {
 
 // Bootstrap Cards
 
-      <div className="card text-white" style={{backgroundColor: '#233D4D', width: 400}}>
+      <div className="card text-white" style={{backgroundColor: '#233D4D', width: 500}}>
         <div className="card-content">
 
 {/* Trail Image */}
@@ -20,8 +20,10 @@ class TrailCard extends Component {
             {/* <img src={require("./hiking.jpg")} */}
 
             {/* alt="Hiking" */}
-            <img src={this.props.trailProp.imageTrail}/>
+            <img className="trailPic"style={{border: '2px solid #ffffff'}} src={this.props.trailProp.imageTrail}/>
         </picture>
+        <br>
+        </br>
 
 {/* Trail Name and mini details (Address / Rating)*/}
         <h3>
@@ -29,10 +31,12 @@ class TrailCard extends Component {
             {this.props.trailProp.name}
             </span>
         </h3>
-            <p>Address: {this.props.trailProp.address}</p>
-            <p>Rating (0-5): {this.props.trailProp.rating}</p>
-            <p>Difficulty: {this.props.trailProp.difficulty}</p>
+        <br></br>
+            <p style={{fontSize: 20}}>Location: {this.props.trailProp.address}</p>
+            <p style={{fontSize: 20}}>Rating (0-5): {this.props.trailProp.rating}</p>
+            <p style={{fontSize: 20}}>Difficulty: {this.props.trailProp.difficulty}</p>
 
+<br></br>
 
 {/* Details button / Link */}
         <Link
@@ -41,6 +45,8 @@ class TrailCard extends Component {
             <Button
                 variant="secondary"
                 size="lg"
+
+
 
             >Details
             </Button>

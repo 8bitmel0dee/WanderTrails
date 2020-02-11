@@ -3,6 +3,7 @@ import TrailManager from '../../modules/TrailManager';
 import { Link } from "react-router-dom";
 import './TrailDetail.css'
 import Button from 'react-bootstrap/Button';
+import { AutoInit } from 'materialize-css';
 
 class TrailDetail extends Component {
 
@@ -50,17 +51,20 @@ class TrailDetail extends Component {
 
     render() {
       return (
-        <div className="card">
+        <div className="card text-white" style={{backgroundColor: '#233D4D', width: 500, marginTop: 50, marginRight: 'auto', marginBottom: 20, marginLeft: 'auto'}}>
           <div className="card-content">
             <picture>
-              <img src={this.state.imageTrail} alt="Hiking" />
+              <img style={{border: '2px solid #ffffff'}} src={this.state.imageTrail} alt="Hiking" />
             </picture>
-            <h3><span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
-            <p>Address: {this.state.address}</p>
-            <p>Date: {this.state.date}</p>
-            <p>Rating: {this.state.rating}</p>
-            <p>Comments: {this.state.comments}</p>
-            <p>Difficulty: {this.state.difficulty}</p>
+            <br>
+            </br>
+            <h3><span style={{ color: 'white' }}>{this.state.name}</span></h3>
+            <br></br>
+            <p style={{fontSize: 20}}>Location: {this.state.address}</p>
+            <p style={{fontSize: 20}}>Date: {this.state.date}</p>
+            <p style={{fontSize: 20}}>Rating: {this.state.rating}</p>
+            <p style={{fontSize: 20}}>Comments: {this.state.comments}</p>
+            <p style={{fontSize: 20}}>Difficulty: {this.state.difficulty}</p>
 
             <Button
                 variant="danger"
@@ -73,7 +77,7 @@ class TrailDetail extends Component {
             <Link to={`/trails/${this.props.trailId}/edit`}>
 
             <Button
-                variant="dark"
+                variant="info"
             >Edit
             </Button>
 

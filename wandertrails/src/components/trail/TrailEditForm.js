@@ -82,7 +82,7 @@ class TrailEditForm extends Component {
                                 value={this.state.name}
                             />
 
-                            <label htmlFor="address">Address</label>
+                            <label htmlFor="address">Location</label>
                             <input
                                 type="text"
                                 required
