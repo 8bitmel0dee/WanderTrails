@@ -84,7 +84,7 @@ class TrailForm extends Component {
                   required
                   onChange={this.handleFieldChange}
                   id="address"
-                  placeholder="Address"
+                  placeholder="Location"
               />
 
               <label htmlFor="date">Date</label>
@@ -105,9 +105,9 @@ class TrailForm extends Component {
                   placeholder="Rating"
               />
 
-              <label htmlFor="date">Comments</label>
-                <input
-                  type="text"
+              <label htmlFor="comments">Comments</label>
+                <input type="text"
+
                   required
                   onChange={this.handleFieldChange}
                   id="comments"
@@ -145,8 +145,15 @@ class TrailForm extends Component {
               </select> */}
 
 
-              <div className="alignRight">
-                <Button variant="success" size="lg"
+
+
+            </div>
+            <br></br>
+            <div>
+                <Button
+                    className="float-right"
+                    variant="success"
+                    size="lg"
                     type="button"
                     disabled={this.state.loadingStatus}
                     onClick={this.constructNewTrail}
@@ -154,8 +161,6 @@ class TrailForm extends Component {
                 > Submit
                 </Button>
               </div>
-
-            </div>
           </fieldset>
         </form>
       </>

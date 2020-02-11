@@ -267,7 +267,7 @@
       "rating": 5,
       "userId": 5,
       "difficulty": 3,
-      "comments": "Amazing view.",
+      "comments": "Amazing view. Trails are well-marked. Seen a turtle and some deer. 8.75 miles by my count. A very fun hike whose only real challenge is the length. No major elevation change. Nice views of a woodland lake, massive boulders, and cliff faces. Popular is spots but solitude is easy enough to come by once you get away from the main entry points. w Well marked. 99% of fallen trees on the trail are cleaned up. Solid hiking, decent views, worth the trip. ",
       "imageTrail": "https://i.imgur.com/X0XHvS4.jpg",
       "archived": false
     },
@@ -281,6 +281,18 @@
       "difficulty": 0,
       "comments": "Muddy trails",
       "imageTrail": "https://i.imgur.com/ruOfn89.jpg",
+      "archived": false
+    },
+    {
+      "id": 26,
+      "name": "Rock Hollow Trail",
+      "address": "Beech Fork State Park, Beech Fork, WV",
+      "date": "2020-01-25",
+      "rating": 5,
+      "userId": 5,
+      "difficulty": 2,
+      "comments": "Great trail. Not the most scenic but quite enjoyable on a rare 70 degree day in January. Some trees down but climbing over and through them brought the kid out of me. Saw a few gorgeous deer. The overlook was a nice relaxing place to rest a few. Great view.",
+      "imageTrail": "https://i.imgur.com/pePFYZz.jpg",
       "archived": false
     }
   ],

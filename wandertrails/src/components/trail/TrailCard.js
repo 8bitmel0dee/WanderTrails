@@ -11,7 +11,7 @@ class TrailCard extends Component {
 
 // Bootstrap Cards
 
-      <div className="card text-white" style={{backgroundColor: '#233D4D', width: 500}}>
+      <div className="card text-white" style={{backgroundColor: '#233D4D', width: 550}}>
         <div className="card-content">
 
 {/* Trail Image */}
@@ -42,12 +42,9 @@ class TrailCard extends Component {
         <Link
             to={`/trails/${this.props.trailProp.id}`}>
 
-            <Button
+            <Button className="float-right"
                 variant="secondary"
                 size="lg"
-
-
-
             >Details
             </Button>
 
