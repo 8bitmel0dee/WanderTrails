@@ -82,7 +82,7 @@ class TrailEditForm extends Component {
                                 value={this.state.name}
                             />
 
-                            <label htmlFor="address">Address</label>
+                            <label htmlFor="address">Location</label>
                             <input
                                 type="text"
                                 required
@@ -154,7 +154,9 @@ class TrailEditForm extends Component {
               </select> */}
                         </div>
                         <div className="alignRight">
-                            <Button variant="success" size="lg"
+                            <Button
+                                variant="success"
+                                size="lg"
                                 type="button"
                                 disabled={this.state.loadingStatus}
                                 onClick={this.updateExistingTrail}

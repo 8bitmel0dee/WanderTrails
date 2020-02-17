@@ -3,6 +3,7 @@ import TrailManager from '../../modules/TrailManager';
 import { Link } from "react-router-dom";
 import './TrailDetail.css'
 import Button from 'react-bootstrap/Button';
+import { AutoInit } from 'materialize-css';
 
 class TrailDetail extends Component {
 
@@ -50,19 +51,40 @@ class TrailDetail extends Component {
 
     render() {
       return (
-        <div className="card">
+        <div className="card text-white" style={{backgroundColor: '#233D4D', width: 800, marginTop: 50, marginRight: 'auto', marginBottom: 20, marginLeft: 'auto'}}>
           <div className="card-content">
             <picture>
-              <img src={this.state.imageTrail} alt="Hiking" />
+              <img style={{border: '2px solid #ffffff'}} src={this.state.imageTrail} alt="Hiking" />
             </picture>
-            <h3><span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
-            <p>Address: {this.state.address}</p>
-            <p>Date: {this.state.date}</p>
-            <p>Rating: {this.state.rating}</p>
-            <p>Comments: {this.state.comments}</p>
-            <p>Difficulty: {this.state.difficulty}</p>
+            <br>
+            </br>
+            <h3 className="text-center"><span style={{ color: 'white' }}>{this.state.name}</span></h3>
+            <br></br>
+            <p className="text-center" style={{fontSize: 20}}>Location: {this.state.address}</p>
+            <p className="text-center" style={{fontSize: 20}}>Date: {this.state.date}</p>
+            <p className="text-center" style={{fontSize: 20}}>Rating: {this.state.rating}</p>
+            <p className="text-center" style={{fontSize: 20}}>Difficulty: {this.state.difficulty}</p>
+            <p className="text-center" style={{fontSize: 20}}>Comments: {this.state.comments}</p>
+
+
+
+
+            <div class="btn-toolbar float-right">
+            <Link to={`/trails/${this.props.trailId}/edit`}>
+
 
             <Button
+                className="mb-2 mr-2 float-right"
+                size="lg"
+                variant="info"
+
+            >Edit
+            </Button>
+          <br></br>
+          <br></br>
+            <Button
+                className="float-right"
+                size="lg"
                 variant="danger"
                 type="button"
                 disabled={this.state.loadingStatus}
@@ -70,17 +92,12 @@ class TrailDetail extends Component {
             >Delete
             </Button>
 
-            <Link to={`/trails/${this.props.trailId}/edit`}>
 
-            <Button
-                variant="dark"
-            >Edit
-            </Button>
 
             </Link>
 
 
-
+            </div>
 
           </div>
         </div>

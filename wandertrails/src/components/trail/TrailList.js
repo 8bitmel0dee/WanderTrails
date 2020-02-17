@@ -75,7 +75,7 @@ class TrailList extends Component {
                 <br></br>
 
                 <section className="sort-dropdown" style={{width: 200}}>
-                    <Select name="Sort By:"
+                    <Select placeholder="Sort By:"
 
                         value={selectedOption}
                         onChange={this.handleChange}
